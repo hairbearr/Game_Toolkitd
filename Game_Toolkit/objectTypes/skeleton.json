@@ -1,19 +1,14 @@
 {
-	"name": "Player",
+	"name": "Skeleton",
 	"plugin-id": "Sprite",
-	"sid": 347680819950273,
+	"sid": 690074006622411,
 	"isGlobal": false,
 	"instanceVariables": [],
 	"behaviorTypes": [
 		{
-			"behaviorId": "scrollto",
-			"name": "ScrollTo",
-			"sid": 268286529157857
-		},
-		{
-			"behaviorId": "EightDir",
-			"name": "8Direction",
-			"sid": 527084172222922
+			"behaviorId": "Turret",
+			"name": "Turret",
+			"sid": 141339951787719
 		}
 	],
 	"effectTypes": [],
@@ -29,12 +24,12 @@
 						"originalSource": "",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
-						"imageSpriteId": 6565817,
+						"imageSpriteId": 4920779,
 						"useCollisionPoly": true,
 						"duration": 1
 					}
 				],
-				"sid": 667817765443546,
+				"sid": 497991550420425,
 				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,

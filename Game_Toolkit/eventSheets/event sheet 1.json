@@ -1,5 +1,28 @@
 {
 	"name": "Event sheet 1",
-	"events": [],
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 248099560134543
+				}
+			],
+			"actions": [
+				{
+					"id": "acquire-target",
+					"objectClass": "Skeleton",
+					"sid": 800159268876355,
+					"behaviorType": "Turret",
+					"parameters": {
+						"target": "Player"
+					}
+				}
+			],
+			"sid": 351544286819332
+		}
+	],
 	"sid": 789898715502506
 }
