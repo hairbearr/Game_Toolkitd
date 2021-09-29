@@ -1,47 +1,29 @@
 {
-	"name": "Player",
+	"name": "Unlocked_ExitDoor",
 	"plugin-id": "Sprite",
-	"sid": 347680819950273,
+	"sid": 541894315308451,
 	"isGlobal": false,
-	"instanceVariables": [
-		{
-			"name": "Health",
-			"type": "number",
-			"desc": "",
-			"sid": 114392027878062
-		}
-	],
-	"behaviorTypes": [
-		{
-			"behaviorId": "scrollto",
-			"name": "ScrollTo",
-			"sid": 268286529157857
-		},
-		{
-			"behaviorId": "EightDir",
-			"name": "8Direction",
-			"sid": 527084172222922
-		}
-	],
+	"instanceVariables": [],
+	"behaviorTypes": [],
 	"effectTypes": [],
 	"animations": {
 		"items": [
 			{
 				"frames": [
 					{
-						"width": 250,
-						"height": 250,
+						"width": 280,
+						"height": 500,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
-						"imageSpriteId": 6565817,
+						"imageSpriteId": 5813529,
 						"useCollisionPoly": true,
 						"duration": 1
 					}
 				],
-				"sid": 667817765443546,
+				"sid": 952408274398826,
 				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,
