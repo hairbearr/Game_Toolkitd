@@ -1,0 +1,432 @@
+{
+	"name": "Event sheet 1",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 248099560134543
+				}
+			],
+			"actions": [
+				{
+					"id": "acquire-target",
+					"objectClass": "Skeleton",
+					"sid": 800159268876355,
+					"behaviorType": "Turret",
+					"parameters": {
+						"target": "Player"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "ScoreText",
+					"sid": 712606472967618,
+					"parameters": {
+						"text": "\"Health: \" & Player.Health"
+					}
+				},
+				{
+					"id": "move-to-object",
+					"objectClass": "Monster",
+					"sid": 532674418980099,
+					"behaviorType": "MoveTo",
+					"parameters": {
+						"object": "Player",
+						"image-point": "0",
+						"mode": "direct"
+					}
+				}
+			],
+			"sid": 351544286819332
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "has-target",
+					"objectClass": "Skeleton",
+					"sid": 314642622464969,
+					"behaviorType": "Turret"
+				}
+			],
+			"actions": [
+				{
+					"id": "set-rate-of-fire",
+					"objectClass": "Skeleton",
+					"sid": 586150613981638,
+					"behaviorType": "Turret",
+					"parameters": {
+						"rate-of-fire": "1"
+					}
+				}
+			],
+			"sid": 331450435390354
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-shoot",
+					"objectClass": "Skeleton",
+					"sid": 622591479494221,
+					"behaviorType": "Turret"
+				}
+			],
+			"actions": [
+				{
+					"id": "spawn-another-object",
+					"objectClass": "Skeleton",
+					"sid": 744707286994748,
+					"parameters": {
+						"object": "Arrow",
+						"layer": "1",
+						"image-point": "0",
+						"create-hierarchy": false
+					}
+				}
+			],
+			"sid": 393091993838270
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "Arrow",
+					"sid": 601454486106401,
+					"parameters": {
+						"object": "Player"
+					}
+				},
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "Player",
+					"sid": 831640539197199,
+					"parameters": {
+						"object": "Spikes"
+					}
+				},
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "Player",
+					"sid": 329151069163216,
+					"parameters": {
+						"object": "Monster"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "subtract-from-instvar",
+					"objectClass": "Player",
+					"sid": 329969070303851,
+					"parameters": {
+						"instance-variable": "Health",
+						"value": "1"
+					}
+				},
+				{
+					"id": "shake",
+					"objectClass": "Player",
+					"sid": 798868686885093,
+					"behaviorType": "ScrollTo",
+					"parameters": {
+						"magnitude": "30",
+						"duration": "1.0",
+						"mode": "reducing-magnitude"
+					}
+				},
+				{
+					"id": "spawn-another-object",
+					"objectClass": "Player",
+					"sid": 488589168002955,
+					"parameters": {
+						"object": "Blood",
+						"layer": "1",
+						"image-point": "0",
+						"create-hierarchy": false
+					}
+				}
+			],
+			"sid": 589779150581968,
+			"isOrBlock": true
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "Key",
+					"sid": 501025965493262,
+					"parameters": {
+						"object": "Tresure_chest"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "spawn-another-object",
+					"objectClass": "Tresure_chest",
+					"sid": 762304268225883,
+					"parameters": {
+						"object": "GreenKey",
+						"layer": "1",
+						"image-point": "0",
+						"create-hierarchy": false
+					}
+				},
+				{
+					"id": "destroy",
+					"objectClass": "Tresure_chest",
+					"sid": 699911701667041
+				},
+				{
+					"id": "destroy",
+					"objectClass": "Key",
+					"sid": 585832819881554
+				}
+			],
+			"sid": 809598618066922
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "Player",
+					"sid": 132808704875037,
+					"parameters": {
+						"instance-variable": "Health",
+						"comparison": 0,
+						"value": "0"
+					}
+				},
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Keyboard",
+					"sid": 727089084061449,
+					"parameters": {
+						"key": 82
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "restart-layout",
+					"objectClass": "System",
+					"sid": 946074298687810
+				}
+			],
+			"sid": 348924726717186,
+			"isOrBlock": true
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "Player",
+					"sid": 719706592635002,
+					"parameters": {
+						"object": "Health"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "add-to-instvar",
+					"objectClass": "Player",
+					"sid": 336834790565359,
+					"parameters": {
+						"instance-variable": "Health",
+						"value": "1"
+					}
+				},
+				{
+					"id": "destroy",
+					"objectClass": "Health",
+					"sid": 915947278849651
+				}
+			],
+			"sid": 677448220378998
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "Player",
+					"sid": 165572405460736,
+					"parameters": {
+						"object": "Key"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "pin-to-object-properties",
+					"objectClass": "Key",
+					"sid": 983318286695706,
+					"behaviorType": "Pin",
+					"parameters": {
+						"pin-to": "Player",
+						"x": true,
+						"y": true,
+						"angle": true,
+						"width-type": "no",
+						"height-type": "no",
+						"z": false
+					}
+				}
+			],
+			"sid": 831459643704902
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "Player",
+					"sid": 733301952707364,
+					"parameters": {
+						"object": "GreenKey"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "spawn-another-object",
+					"objectClass": "Exit_Door",
+					"sid": 616703565452863,
+					"parameters": {
+						"object": "Unlocked_ExitDoor",
+						"layer": "1",
+						"image-point": "0",
+						"create-hierarchy": false
+					}
+				},
+				{
+					"id": "destroy",
+					"objectClass": "Exit_Door",
+					"sid": 195205032669465
+				},
+				{
+					"id": "destroy",
+					"objectClass": "GreenKey",
+					"sid": 420366770232969
+				}
+			],
+			"sid": 156128809299772
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "Player",
+					"sid": 474553882494769,
+					"parameters": {
+						"object": "Unlocked_ExitDoor"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-nextprevious-layout",
+					"objectClass": "System",
+					"sid": 219720926936684,
+					"parameters": {
+						"which": "next"
+					}
+				}
+			],
+			"sid": 922628187772935
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "Player",
+					"sid": 276172545805973,
+					"parameters": {
+						"object": "swordanimation"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "pin-to-object-properties",
+					"objectClass": "swordanimation",
+					"sid": 512524619267816,
+					"behaviorType": "Pin",
+					"parameters": {
+						"pin-to": "Player",
+						"x": true,
+						"y": true,
+						"angle": true,
+						"width-type": "no",
+						"height-type": "no",
+						"z": false
+					}
+				},
+				{
+					"id": "set-destroy",
+					"objectClass": "swordanimation",
+					"sid": 125876076780950,
+					"behaviorType": "Pin",
+					"parameters": {
+						"destroy": true
+					}
+				}
+			],
+			"sid": 858630157420447
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "Monster",
+					"sid": 619388039514593,
+					"parameters": {
+						"object": "swordanimation"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "Monster",
+					"sid": 513113057364604
+				}
+			],
+			"sid": 636153694183654
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "Skeleton",
+					"sid": 430506833932056,
+					"parameters": {
+						"object": "swordanimation"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "Skeleton",
+					"sid": 402397819673103
+				}
+			],
+			"sid": 997176298408831
+		}
+	],
+	"sid": 789898715502506
+}
