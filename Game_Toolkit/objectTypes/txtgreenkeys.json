@@ -1,14 +1,14 @@
 {
-	"name": "ScoreText",
+	"name": "TxtGreenKeys",
 	"plugin-id": "Text",
-	"sid": 917636722782360,
+	"sid": 687978258511915,
 	"isGlobal": false,
 	"instanceVariables": [],
 	"behaviorTypes": [
 		{
 			"behaviorId": "scrollto",
 			"name": "ScrollTo",
-			"sid": 605116862812951
+			"sid": 765720848220864
 		}
 	],
 	"effectTypes": []

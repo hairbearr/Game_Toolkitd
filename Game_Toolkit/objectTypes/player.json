@@ -7,8 +7,20 @@
 		{
 			"name": "Health",
 			"type": "number",
-			"desc": "",
+			"desc": "Amount of health the player has.",
 			"sid": 114392027878062
+		},
+		{
+			"name": "GreenKeys",
+			"type": "number",
+			"desc": "# of Green Keys the player has",
+			"sid": 763793804334858
+		},
+		{
+			"name": "GoldKeys",
+			"type": "number",
+			"desc": "# of Gold Keys the player has.",
+			"sid": 740149225701535
 		}
 	],
 	"behaviorTypes": [
@@ -43,6 +55,57 @@
 				],
 				"sid": 667817765443546,
 				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			},
+			{
+				"frames": [
+					{
+						"width": 350,
+						"height": 250,
+						"originX": 0.35714285714285715,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 9374848,
+						"collisionPoly": {
+							"points": [
+								0,
+								0,
+								0.7142857142857143,
+								0,
+								0.719464285714287,
+								0.7930000000000006,
+								0.7495535714285725,
+								0.7985000000000005,
+								0.7503571428571447,
+								0.8540000000000006,
+								0.9535714285714282,
+								0.8600000000000005,
+								0.9530357142857135,
+								0.8997500000000005,
+								0.9524999999999988,
+								0.9395000000000006,
+								0.7492857142857156,
+								0.9420000000000005,
+								0.7500000000000004,
+								0.9990000000000004,
+								0.7142857142857143,
+								1,
+								0,
+								1
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 836317403920063,
+				"name": "Combat",
 				"isLooping": false,
 				"isPingPong": false,
 				"repeatCount": 1,

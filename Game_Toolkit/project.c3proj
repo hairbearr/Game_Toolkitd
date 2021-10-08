@@ -120,16 +120,16 @@
 		},
 		{
 			"type": "behavior",
-			"id": "Pin",
-			"name": "Pin",
+			"id": "MoveTo",
+			"name": "Move To",
 			"author": "Scirra",
 			"version": "r260",
 			"bundled": false
 		},
 		{
 			"type": "behavior",
-			"id": "MoveTo",
-			"name": "Move To",
+			"id": "LOS",
+			"name": "Line of sight",
 			"author": "Scirra",
 			"version": "r260",
 			"bundled": false
@@ -157,7 +157,7 @@
 			"Key",
 			"Unlocked_ExitDoor",
 			"Spikes",
-			"ScoreText",
+			"TxtGoldKeys",
 			"Health",
 			"GreenKey",
 			"Monster",
@@ -166,14 +166,18 @@
 			"TiledBackground",
 			"Button",
 			"Title",
-			"TiledBackground2"
+			"TiledBackground2",
+			"TxtGreenKeys",
+			"TxtHealth"
 		],
 		"subfolders": []
 	},
 	"autosaveData": null,
 	"containers": [],
 	"families": {
-		"items": [],
+		"items": [
+			"Enemies"
+		],
 		"subfolders": []
 	},
 	"layouts": {

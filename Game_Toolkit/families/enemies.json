@@ -1,0 +1,25 @@
+{
+	"name": "Enemies",
+	"plugin-id": "Sprite",
+	"sid": 436640860303220,
+	"instanceVariables": [
+		{
+			"name": "EnemyHealth",
+			"type": "number",
+			"desc": "Health of the Enemy",
+			"sid": 134965064741029
+		}
+	],
+	"behaviorTypes": [
+		{
+			"behaviorId": "LOS",
+			"name": "LineOfSight",
+			"sid": 469137507361805
+		}
+	],
+	"effectTypes": [],
+	"members": [
+		"Monster",
+		"Skeleton"
+	]
+}

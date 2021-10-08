@@ -46,7 +46,9 @@
 					},
 					"uid": 2,
 					"instanceVariables": {
-						"Health": 5
+						"Health": 5,
+						"GreenKeys": 0,
+						"GoldKeys": 0
 					},
 					"behaviors": {
 						"ScrollTo": {
@@ -170,8 +172,18 @@
 						"live-preview": false
 					},
 					"uid": 5,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"EnemyHealth": 1
+					},
 					"behaviors": {
+						"LineOfSight": {
+							"properties": {
+								"obstacles": "solids",
+								"range": 10000,
+								"cone-of-view": 360,
+								"use-collision-cells": true
+							}
+						},
 						"Turret": {
 							"properties": {
 								"range": 300,
@@ -251,13 +263,15 @@
 					"type": "Tresure_chest",
 					"properties": {
 						"initially-visible": true,
-						"initial-animation": "Animation 1",
+						"initial-animation": "Locked",
 						"initial-frame": 0,
 						"enable-collisions": true,
 						"live-preview": false
 					},
 					"uid": 8,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"GoldKeysNeeded": 1
+					},
 					"behaviors": {},
 					"world": {
 						"x": 570,
@@ -280,13 +294,15 @@
 					"type": "Exit_Door",
 					"properties": {
 						"initially-visible": true,
-						"initial-animation": "Animation 1",
+						"initial-animation": "Locked",
 						"initial-frame": 0,
 						"enable-collisions": true,
 						"live-preview": false
 					},
 					"uid": 9,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"GreenKeysNeededd": 1
+					},
 					"behaviors": {},
 					"world": {
 						"x": 946,
@@ -316,47 +332,12 @@
 					},
 					"uid": 10,
 					"instanceVariables": {},
-					"behaviors": {
-						"Pin": {
-							"properties": {
-								"destroy": false
-							}
-						}
-					},
+					"behaviors": {},
 					"world": {
 						"x": 543,
 						"y": 36,
 						"width": 38,
 						"height": 43,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "Unlocked_ExitDoor",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 11,
-					"instanceVariables": {},
-					"behaviors": {},
-					"world": {
-						"x": 553,
-						"y": -180,
-						"width": 43,
-						"height": 79,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -466,8 +447,18 @@
 						"live-preview": false
 					},
 					"uid": 16,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"EnemyHealth": 2
+					},
 					"behaviors": {
+						"LineOfSight": {
+							"properties": {
+								"obstacles": "solids",
+								"range": 10000,
+								"cone-of-view": 360,
+								"use-collision-cells": true
+							}
+						},
 						"MoveTo": {
 							"properties": {
 								"max-speed": 80,
@@ -719,9 +710,9 @@
 			"overriden": 0,
 			"instances": [
 				{
-					"type": "ScoreText",
+					"type": "TxtGoldKeys",
 					"properties": {
-						"text": "Text",
+						"text": "Gold Keys: 0/0",
 						"enable-bbcode": true,
 						"font": "Arial",
 						"size": 12,
@@ -752,7 +743,103 @@
 					"world": {
 						"x": 1,
 						"y": 2,
-						"width": 847,
+						"width": 118.8181818181813,
+						"height": 30,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "TxtGreenKeys",
+					"properties": {
+						"text": "Green Keys: 0/0",
+						"enable-bbcode": true,
+						"font": "Arial",
+						"size": 12,
+						"line-height": 0,
+						"bold": false,
+						"italic": false,
+						"color": [
+							0,
+							0,
+							0,
+							1
+						],
+						"horizontal-alignment": "left",
+						"vertical-alignment": "top",
+						"wrapping": "word",
+						"initially-visible": true,
+						"origin": "top-left"
+					},
+					"uid": 28,
+					"instanceVariables": {},
+					"behaviors": {
+						"ScrollTo": {
+							"properties": {
+								"enabled": true
+							}
+						}
+					},
+					"world": {
+						"x": 0.9499255093660395,
+						"y": 28.519881508567096,
+						"width": 118.8181818181813,
+						"height": 30,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "TxtHealth",
+					"properties": {
+						"text": "Health: 00",
+						"enable-bbcode": true,
+						"font": "Arial",
+						"size": 12,
+						"line-height": 0,
+						"bold": false,
+						"italic": false,
+						"color": [
+							0,
+							0,
+							0,
+							1
+						],
+						"horizontal-alignment": "left",
+						"vertical-alignment": "top",
+						"wrapping": "word",
+						"initially-visible": true,
+						"origin": "top-left"
+					},
+					"uid": 29,
+					"instanceVariables": {},
+					"behaviors": {
+						"ScrollTo": {
+							"properties": {
+								"enabled": true
+							}
+						}
+					},
+					"world": {
+						"x": 1.8589852072975077,
+						"y": 50.33810771595347,
+						"width": 118.8181818181813,
 						"height": 30,
 						"originX": 0,
 						"originY": 0,
