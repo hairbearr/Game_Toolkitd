@@ -9,6 +9,29 @@
 			"isActiveOnStart": true,
 			"children": [
 				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "Enemies",
+							"sid": 855661376103387,
+							"parameters": {
+								"instance-variable": "EnemyHealth",
+								"comparison": 3,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "Enemies",
+							"sid": 174813019321767
+						}
+					],
+					"sid": 897778889208363
+				},
+				{
 					"eventType": "group",
 					"disabled": false,
 					"title": "Chasing Enemy",
@@ -43,6 +66,31 @@
 								}
 							],
 							"sid": 108603813147404
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "has-los-to-object",
+									"objectClass": "Monster",
+									"sid": 717227483136083,
+									"behaviorType": "LineOfSight",
+									"parameters": {
+										"object": "Player",
+										"image-point": "0"
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "stop",
+									"objectClass": "Monster",
+									"sid": 789797122443344,
+									"behaviorType": "MoveTo"
+								}
+							],
+							"sid": 252569988051659
 						},
 						{
 							"eventType": "block",
@@ -234,29 +282,6 @@
 						}
 					],
 					"sid": 174819414449028
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "compare-instance-variable",
-							"objectClass": "Enemies",
-							"sid": 785002107632846,
-							"parameters": {
-								"instance-variable": "EnemyHealth",
-								"comparison": 3,
-								"value": "0"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "destroy",
-							"objectClass": "Enemies",
-							"sid": 678400964132407
-						}
-					],
-					"sid": 889576942625988
 				}
 			],
 			"sid": 737354689662161
