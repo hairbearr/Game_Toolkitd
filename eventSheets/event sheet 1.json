@@ -1,0 +1,865 @@
+{
+	"name": "Event sheet 1",
+	"events": [
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Enemies",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "Chasing Enemy",
+					"description": "The monster that will chase you",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "has-los-to-object",
+									"objectClass": "Monster",
+									"sid": 552429116368461,
+									"behaviorType": "LineOfSight",
+									"parameters": {
+										"object": "Player",
+										"image-point": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "move-to-object",
+									"objectClass": "Monster",
+									"sid": 764393972940165,
+									"behaviorType": "MoveTo",
+									"parameters": {
+										"object": "Player",
+										"image-point": "0",
+										"mode": "direct"
+									}
+								}
+							],
+							"sid": 108603813147404
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-collision-with-another-object",
+									"objectClass": "Monster",
+									"sid": 550312825765743,
+									"parameters": {
+										"object": "Player"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "subtract-from-instvar",
+									"objectClass": "Player",
+									"sid": 405043423623851,
+									"parameters": {
+										"instance-variable": "Health",
+										"value": "1"
+									}
+								},
+								{
+									"id": "shake",
+									"objectClass": "Player",
+									"sid": 446346497690880,
+									"behaviorType": "ScrollTo",
+									"parameters": {
+										"magnitude": "30",
+										"duration": "1.0",
+										"mode": "reducing-magnitude"
+									}
+								},
+								{
+									"id": "spawn-another-object",
+									"objectClass": "Player",
+									"sid": 288123483812504,
+									"parameters": {
+										"object": "Blood",
+										"layer": "1",
+										"image-point": "0",
+										"create-hierarchy": false
+									}
+								}
+							],
+							"sid": 619704437507253
+						}
+					],
+					"sid": 600932709468374
+				},
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "Turret Enemies",
+					"description": "The enemies that shoot things/are turrets.",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "has-target",
+									"objectClass": "Skeleton",
+									"sid": 612118178834253,
+									"behaviorType": "Turret"
+								}
+							],
+							"actions": [
+								{
+									"id": "set-rate-of-fire",
+									"objectClass": "Skeleton",
+									"sid": 661030290684116,
+									"behaviorType": "Turret",
+									"parameters": {
+										"rate-of-fire": "1"
+									}
+								}
+							],
+							"sid": 406150921857375
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-shoot",
+									"objectClass": "Skeleton",
+									"sid": 342610465760021,
+									"behaviorType": "Turret"
+								}
+							],
+							"actions": [
+								{
+									"id": "spawn-another-object",
+									"objectClass": "Skeleton",
+									"sid": 415066087185331,
+									"parameters": {
+										"object": "Arrow",
+										"layer": "1",
+										"image-point": "0",
+										"create-hierarchy": false
+									}
+								},
+								{
+									"id": "set-speed",
+									"objectClass": "Arrow",
+									"sid": 529138110837900,
+									"behaviorType": "Bullet",
+									"parameters": {
+										"speed": "400"
+									}
+								}
+							],
+							"sid": 433156418882923
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "has-los-to-object",
+									"objectClass": "Skeleton",
+									"sid": 549155624623731,
+									"behaviorType": "LineOfSight",
+									"parameters": {
+										"object": "Player",
+										"image-point": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "acquire-target",
+									"objectClass": "Skeleton",
+									"sid": 974639602848128,
+									"behaviorType": "Turret",
+									"parameters": {
+										"target": "Player"
+									}
+								}
+							],
+							"sid": 475064543798195
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-collision-with-another-object",
+									"objectClass": "Arrow",
+									"sid": 221128233689712,
+									"parameters": {
+										"object": "Player"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "subtract-from-instvar",
+									"objectClass": "Player",
+									"sid": 254280733505271,
+									"parameters": {
+										"instance-variable": "Health",
+										"value": "1"
+									}
+								},
+								{
+									"id": "shake",
+									"objectClass": "Player",
+									"sid": 897838750588609,
+									"behaviorType": "ScrollTo",
+									"parameters": {
+										"magnitude": "30",
+										"duration": "1.0",
+										"mode": "reducing-magnitude"
+									}
+								},
+								{
+									"id": "spawn-another-object",
+									"objectClass": "Player",
+									"sid": 249818196955184,
+									"parameters": {
+										"object": "Blood",
+										"layer": "1",
+										"image-point": "0",
+										"create-hierarchy": false
+									}
+								}
+							],
+							"sid": 834273680051392
+						}
+					],
+					"sid": 174819414449028
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "Enemies",
+							"sid": 785002107632846,
+							"parameters": {
+								"instance-variable": "EnemyHealth",
+								"comparison": 3,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "Enemies",
+							"sid": 678400964132407
+						}
+					],
+					"sid": 889576942625988
+				}
+			],
+			"sid": 737354689662161
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Player",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 631404372046263
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "TxtHealth",
+							"sid": 159595443326455,
+							"parameters": {
+								"text": "\"Health: \" & Player.Health"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "TxtGoldKeys",
+							"sid": 960677842243413,
+							"parameters": {
+								"text": "\"Gold Keys: \" & Player.GoldKeys"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "TxtGreenKeys",
+							"sid": 327862998014043,
+							"parameters": {
+								"text": "\"Green Keys: \" & Player.GreenKeys"
+							}
+						}
+					],
+					"sid": 633941625476330
+				},
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "Interactions",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-collision-with-another-object",
+									"objectClass": "Player",
+									"sid": 306532489069721,
+									"parameters": {
+										"object": "Tresure_chest"
+									}
+								},
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "Player",
+									"sid": 747866278608371,
+									"parameters": {
+										"instance-variable": "GoldKeys",
+										"comparison": 0,
+										"value": "Tresure_chest.GoldKeysNeeded"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "destroy",
+									"objectClass": "Tresure_chest",
+									"sid": 304138276254196
+								},
+								{
+									"id": "subtract-from-instvar",
+									"objectClass": "Player",
+									"sid": 605223901527586,
+									"parameters": {
+										"instance-variable": "GoldKeys",
+										"value": "Tresure_chest.GoldKeysNeeded"
+									}
+								},
+								{
+									"id": "spawn-another-object",
+									"objectClass": "Tresure_chest",
+									"sid": 151857926527299,
+									"parameters": {
+										"object": "GreenKey",
+										"layer": "1",
+										"image-point": "0",
+										"create-hierarchy": false
+									}
+								}
+							],
+							"sid": 580948168886263
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-collision-with-another-object",
+									"objectClass": "Player",
+									"sid": 635762063791161,
+									"parameters": {
+										"object": "Exit_Door"
+									}
+								},
+								{
+									"id": "is-animation-playing",
+									"objectClass": "Exit_Door",
+									"sid": 356971976978574,
+									"parameters": {
+										"animation": "\"Open\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "go-to-nextprevious-layout",
+									"objectClass": "System",
+									"sid": 428087702343114,
+									"parameters": {
+										"which": "next"
+									}
+								}
+							],
+							"sid": 998896765511630
+						}
+					],
+					"sid": 781791411970551
+				},
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "Movement",
+					"description": "Things that move the character",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "key-is-down",
+									"objectClass": "Keyboard",
+									"sid": 249879727478913,
+									"parameters": {
+										"key": 87
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "simulate-control",
+									"objectClass": "Player",
+									"sid": 249885987240396,
+									"behaviorType": "8Direction",
+									"parameters": {
+										"control": "up"
+									}
+								}
+							],
+							"sid": 602700065738965
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "key-is-down",
+									"objectClass": "Keyboard",
+									"sid": 202608611419879,
+									"parameters": {
+										"key": 65
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "simulate-control",
+									"objectClass": "Player",
+									"sid": 961048907282322,
+									"behaviorType": "8Direction",
+									"parameters": {
+										"control": "left"
+									}
+								}
+							],
+							"sid": 185961903797559
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "key-is-down",
+									"objectClass": "Keyboard",
+									"sid": 767567990852701,
+									"parameters": {
+										"key": 83
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "simulate-control",
+									"objectClass": "Player",
+									"sid": 724745419715973,
+									"behaviorType": "8Direction",
+									"parameters": {
+										"control": "down"
+									}
+								}
+							],
+							"sid": 644442971865190
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "key-is-down",
+									"objectClass": "Keyboard",
+									"sid": 514968984058136,
+									"parameters": {
+										"key": 68
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "simulate-control",
+									"objectClass": "Player",
+									"sid": 605094545648780,
+									"behaviorType": "8Direction",
+									"parameters": {
+										"control": "right"
+									}
+								}
+							],
+							"sid": 661002609549392
+						}
+					],
+					"sid": 143317924451587
+				},
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "Combat",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "Player",
+									"sid": 537611475495278,
+									"parameters": {
+										"instance-variable": "Health",
+										"comparison": 3,
+										"value": "0"
+									}
+								},
+								{
+									"id": "on-key-pressed",
+									"objectClass": "Keyboard",
+									"sid": 781585163783229,
+									"parameters": {
+										"key": 82
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "restart-layout",
+									"objectClass": "System",
+									"sid": 611773004288448
+								}
+							],
+							"sid": 699195833733482,
+							"isOrBlock": true
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-key-pressed",
+									"objectClass": "Keyboard",
+									"sid": 973811694820050,
+									"parameters": {
+										"key": 32
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "Player",
+									"sid": 629701386451946,
+									"parameters": {
+										"animation": "\"Combat\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 458984499270546,
+									"parameters": {
+										"seconds": "0.2"
+									}
+								},
+								{
+									"id": "set-animation",
+									"objectClass": "Player",
+									"sid": 213162973827667,
+									"parameters": {
+										"animation": "\"Animation 1\"",
+										"from": "beginning"
+									}
+								}
+							],
+							"sid": 698702125191659
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-collision-with-another-object",
+									"objectClass": "Player",
+									"sid": 379510346791712,
+									"parameters": {
+										"object": "Enemies"
+									}
+								},
+								{
+									"id": "is-animation-playing",
+									"objectClass": "Player",
+									"sid": 539602941225332,
+									"parameters": {
+										"animation": "\"Combat\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "subtract-from-instvar",
+									"objectClass": "Enemies",
+									"sid": 412394728535390,
+									"parameters": {
+										"instance-variable": "EnemyHealth",
+										"value": "1"
+									}
+								}
+							],
+							"sid": 960282477048295
+						}
+					],
+					"sid": 256455487874863
+				}
+			],
+			"sid": 874975563186382
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Collectables",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "Keys",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-collision-with-another-object",
+									"objectClass": "Key",
+									"sid": 889730553741976,
+									"parameters": {
+										"object": "Player"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "destroy",
+									"objectClass": "Key",
+									"sid": 689041999598211
+								},
+								{
+									"id": "add-to-instvar",
+									"objectClass": "Player",
+									"sid": 325935482796311,
+									"parameters": {
+										"instance-variable": "GoldKeys",
+										"value": "1"
+									}
+								}
+							],
+							"sid": 904994981055553
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-collision-with-another-object",
+									"objectClass": "GreenKey",
+									"sid": 191685218690186,
+									"parameters": {
+										"object": "Player"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "destroy",
+									"objectClass": "GreenKey",
+									"sid": 370184243137682
+								},
+								{
+									"id": "add-to-instvar",
+									"objectClass": "Player",
+									"sid": 105976189994825,
+									"parameters": {
+										"instance-variable": "GreenKeys",
+										"value": "1"
+									}
+								}
+							],
+							"sid": 640822130646478
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "Exit_Door",
+									"sid": 344949493183455,
+									"parameters": {
+										"instance-variable": "GreenKeysNeededd",
+										"comparison": 0,
+										"value": "Player.GreenKeys"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "Exit_Door",
+									"sid": 435757336048483,
+									"parameters": {
+										"animation": "\"Open\"",
+										"from": "beginning"
+									}
+								}
+							],
+							"sid": 914091760707096
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "Tresure_chest",
+									"sid": 645447953210474,
+									"parameters": {
+										"instance-variable": "GoldKeysNeeded",
+										"comparison": 0,
+										"value": "Player.GoldKeys"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "Tresure_chest",
+									"sid": 338079043533853,
+									"parameters": {
+										"animation": "\"Unlocked\"",
+										"from": "beginning"
+									}
+								}
+							],
+							"sid": 502782899427442
+						}
+					],
+					"sid": 529597020189189
+				},
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "PowerUps",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-collision-with-another-object",
+									"objectClass": "Health",
+									"sid": 509951252352435,
+									"parameters": {
+										"object": "Player"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "add-to-instvar",
+									"objectClass": "Player",
+									"sid": 388611958604688,
+									"parameters": {
+										"instance-variable": "Health",
+										"value": "1"
+									}
+								},
+								{
+									"id": "destroy",
+									"objectClass": "Health",
+									"sid": 108562604357467
+								}
+							],
+							"sid": 428365528664193
+						}
+					],
+					"sid": 449907844497131
+				}
+			],
+			"sid": 710043282463393
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Hazards",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "Spikes",
+							"sid": 994935487939138,
+							"parameters": {
+								"object": "Player"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "subtract-from-instvar",
+							"objectClass": "Player",
+							"sid": 843586980768024,
+							"parameters": {
+								"instance-variable": "Health",
+								"value": "1"
+							}
+						},
+						{
+							"id": "shake",
+							"objectClass": "Player",
+							"sid": 263903078708948,
+							"behaviorType": "ScrollTo",
+							"parameters": {
+								"magnitude": "30",
+								"duration": "1.0",
+								"mode": "reducing-magnitude"
+							}
+						},
+						{
+							"id": "spawn-another-object",
+							"objectClass": "Player",
+							"sid": 209464897677026,
+							"parameters": {
+								"object": "Blood",
+								"layer": "1",
+								"image-point": "0",
+								"create-hierarchy": false
+							}
+						}
+					],
+					"sid": 236831263549946,
+					"isOrBlock": true
+				}
+			],
+			"sid": 216686098216951
+		}
+	],
+	"sid": 789898715502506
+}

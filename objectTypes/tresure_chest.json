@@ -1,0 +1,67 @@
+{
+	"name": "Tresure_chest",
+	"plugin-id": "Sprite",
+	"sid": 351427852964347,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "GoldKeysNeeded",
+			"type": "number",
+			"desc": "How many gold keys are needed to unlock the chest.",
+			"sid": 353258708625417
+		}
+	],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 250,
+						"height": 250,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 880473,
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 731004226026980,
+				"name": "Locked",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			},
+			{
+				"frames": [
+					{
+						"width": 250,
+						"height": 250,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 7094251,
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 617056794342992,
+				"name": "Unlocked",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}
