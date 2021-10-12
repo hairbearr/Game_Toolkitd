@@ -73,15 +73,15 @@
 					"properties": {
 						"text": "Congratulations",
 						"enable-bbcode": true,
-						"font": "Arial",
-						"size": 20,
+						"font": "Palatino Linotype",
+						"size": 67,
 						"line-height": 0,
 						"bold": true,
 						"italic": false,
 						"color": [
-							0,
-							0,
-							0,
+							0.050980392156862744,
+							0.050980392156862744,
+							0.050980392156862744,
 							1
 						],
 						"horizontal-alignment": "left",
@@ -94,10 +94,10 @@
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 308,
-						"y": 244,
-						"width": 231,
-						"height": 42,
+						"x": 138,
+						"y": 97,
+						"width": 698,
+						"height": 157,
 						"originX": 0,
 						"originY": 0,
 						"color": [
@@ -142,7 +142,7 @@
 			"overriden": 0,
 			"instances": [
 				{
-					"type": "Button",
+					"type": "RestartLevelButton",
 					"properties": {
 						"type": "button",
 						"text": "Restart Level",
@@ -157,10 +157,10 @@
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 358,
-						"y": 298,
-						"width": 111,
-						"height": 47,
+						"x": 282,
+						"y": 304,
+						"width": 339,
+						"height": 131,
 						"originX": 0,
 						"originY": 0,
 						"color": [

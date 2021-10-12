@@ -39,7 +39,7 @@
 					}
 				},
 				{
-					"type": "Button",
+					"type": "RestartLevelButton",
 					"properties": {
 						"type": "button",
 						"text": "Start Demo",
