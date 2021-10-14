@@ -63,6 +63,14 @@
 			"bundled": false
 		},
 		{
+			"type": "plugin",
+			"id": "Mouse",
+			"name": "Mouse",
+			"author": "Scirra",
+			"version": "r260",
+			"bundled": false
+		},
+		{
 			"type": "behavior",
 			"id": "scrollto",
 			"name": "Scroll To",
@@ -176,7 +184,8 @@
 			"Title",
 			"TiledBackground2",
 			"TxtGreenKeys",
-			"TxtHealth"
+			"TxtHealth",
+			"Mouse"
 		],
 		"subfolders": []
 	},

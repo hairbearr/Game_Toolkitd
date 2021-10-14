@@ -104,40 +104,85 @@
 									}
 								}
 							],
-							"actions": [
+							"actions": [],
+							"sid": 619704437507253,
+							"children": [
 								{
-									"id": "subtract-from-instvar",
-									"objectClass": "Player",
-									"sid": 405043423623851,
-									"parameters": {
-										"instance-variable": "Health",
-										"value": "1"
-									}
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-boolean-instance-variable-set",
+											"objectClass": "Player",
+											"sid": 945630326832956,
+											"parameters": {
+												"instance-variable": "isBlocking"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "shake",
+											"objectClass": "Player",
+											"sid": 634203193743772,
+											"behaviorType": "ScrollTo",
+											"parameters": {
+												"magnitude": "30",
+												"duration": "1.0",
+												"mode": "reducing-magnitude"
+											}
+										}
+									],
+									"sid": 171622293805775
 								},
 								{
-									"id": "shake",
-									"objectClass": "Player",
-									"sid": 446346497690880,
-									"behaviorType": "ScrollTo",
-									"parameters": {
-										"magnitude": "30",
-										"duration": "1.0",
-										"mode": "reducing-magnitude"
-									}
-								},
-								{
-									"id": "spawn-another-object",
-									"objectClass": "Player",
-									"sid": 288123483812504,
-									"parameters": {
-										"object": "Blood",
-										"layer": "1",
-										"image-point": "0",
-										"create-hierarchy": false
-									}
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-boolean-instance-variable-set",
+											"objectClass": "Player",
+											"sid": 354064736389534,
+											"parameters": {
+												"instance-variable": "isBlocking"
+											},
+											"isInverted": true
+										}
+									],
+									"actions": [
+										{
+											"id": "shake",
+											"objectClass": "Player",
+											"sid": 476147453385803,
+											"behaviorType": "ScrollTo",
+											"parameters": {
+												"magnitude": "30",
+												"duration": "1.0",
+												"mode": "reducing-magnitude"
+											}
+										},
+										{
+											"id": "subtract-from-instvar",
+											"objectClass": "Player",
+											"sid": 700944975457698,
+											"parameters": {
+												"instance-variable": "Health",
+												"value": "1"
+											}
+										},
+										{
+											"id": "spawn-another-object",
+											"objectClass": "Player",
+											"sid": 371319556161089,
+											"parameters": {
+												"object": "Blood",
+												"layer": "1",
+												"image-point": "0",
+												"create-hierarchy": false
+											}
+										}
+									],
+									"sid": 770583166275006
 								}
-							],
-							"sid": 619704437507253
+							]
 						}
 					],
 					"sid": 600932709468374
@@ -245,40 +290,85 @@
 									}
 								}
 							],
-							"actions": [
+							"actions": [],
+							"sid": 834273680051392,
+							"children": [
 								{
-									"id": "subtract-from-instvar",
-									"objectClass": "Player",
-									"sid": 254280733505271,
-									"parameters": {
-										"instance-variable": "Health",
-										"value": "1"
-									}
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-boolean-instance-variable-set",
+											"objectClass": "Player",
+											"sid": 220147998379982,
+											"parameters": {
+												"instance-variable": "isBlocking"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "shake",
+											"objectClass": "Player",
+											"sid": 377497325221984,
+											"behaviorType": "ScrollTo",
+											"parameters": {
+												"magnitude": "30",
+												"duration": "1.0",
+												"mode": "reducing-magnitude"
+											}
+										}
+									],
+									"sid": 999841528274794
 								},
 								{
-									"id": "shake",
-									"objectClass": "Player",
-									"sid": 897838750588609,
-									"behaviorType": "ScrollTo",
-									"parameters": {
-										"magnitude": "30",
-										"duration": "1.0",
-										"mode": "reducing-magnitude"
-									}
-								},
-								{
-									"id": "spawn-another-object",
-									"objectClass": "Player",
-									"sid": 249818196955184,
-									"parameters": {
-										"object": "Blood",
-										"layer": "1",
-										"image-point": "0",
-										"create-hierarchy": false
-									}
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-boolean-instance-variable-set",
+											"objectClass": "Player",
+											"sid": 574090493838599,
+											"parameters": {
+												"instance-variable": "isBlocking"
+											},
+											"isInverted": true
+										}
+									],
+									"actions": [
+										{
+											"id": "shake",
+											"objectClass": "Player",
+											"sid": 204183426761971,
+											"behaviorType": "ScrollTo",
+											"parameters": {
+												"magnitude": "30",
+												"duration": "1.0",
+												"mode": "reducing-magnitude"
+											}
+										},
+										{
+											"id": "subtract-from-instvar",
+											"objectClass": "Player",
+											"sid": 258302839940713,
+											"parameters": {
+												"instance-variable": "Health",
+												"value": "1"
+											}
+										},
+										{
+											"id": "spawn-another-object",
+											"objectClass": "Player",
+											"sid": 710432360934959,
+											"parameters": {
+												"object": "Blood",
+												"layer": "1",
+												"image-point": "0",
+												"create-hierarchy": false
+											}
+										}
+									],
+									"sid": 514422916890474
 								}
-							],
-							"sid": 834273680051392
+							]
 						}
 					],
 					"sid": 174819414449028
@@ -529,6 +619,29 @@
 								}
 							],
 							"sid": 661002609549392
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-moving",
+									"objectClass": "Player",
+									"sid": 654472891826593,
+									"behaviorType": "8Direction"
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "Player",
+									"sid": 682618153396316,
+									"parameters": {
+										"animation": "\"Animation 1\"",
+										"from": "beginning"
+									}
+								}
+							],
+							"sid": 570203737539424
 						}
 					],
 					"sid": 143317924451587
@@ -576,22 +689,23 @@
 							"eventType": "block",
 							"conditions": [
 								{
-									"id": "on-key-pressed",
-									"objectClass": "Keyboard",
-									"sid": 973811694820050,
+									"id": "on-click",
+									"objectClass": "Mouse",
+									"sid": 458957976437943,
 									"parameters": {
-										"key": 32
+										"mouse-button": "left",
+										"click-type": "clicked"
 									}
 								}
 							],
 							"actions": [
 								{
-									"id": "set-animation",
+									"id": "set-boolean-instvar",
 									"objectClass": "Player",
-									"sid": 629701386451946,
+									"sid": 338328518692151,
 									"parameters": {
-										"animation": "\"Combat\"",
-										"from": "beginning"
+										"instance-variable": "isAttacking",
+										"value": "true"
 									}
 								},
 								{
@@ -603,12 +717,12 @@
 									}
 								},
 								{
-									"id": "set-animation",
+									"id": "set-boolean-instvar",
 									"objectClass": "Player",
-									"sid": 213162973827667,
+									"sid": 424691887502966,
 									"parameters": {
-										"animation": "\"Animation 1\"",
-										"from": "beginning"
+										"instance-variable": "isAttacking",
+										"value": "false"
 									}
 								}
 							],
@@ -646,6 +760,56 @@
 								}
 							],
 							"sid": 960282477048295
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-button-released",
+									"objectClass": "Mouse",
+									"sid": 738712818279988,
+									"parameters": {
+										"mouse-button": "right"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "Player",
+									"sid": 659074578026038,
+									"parameters": {
+										"instance-variable": "isBlocking",
+										"value": "false"
+									}
+								}
+							],
+							"sid": 563354557061029
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "mouse-button-is-down",
+									"objectClass": "Mouse",
+									"sid": 348720511733203,
+									"parameters": {
+										"mouse-button": "right"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "Player",
+									"sid": 844462832842085,
+									"parameters": {
+										"instance-variable": "isBlocking",
+										"value": "true"
+									}
+								}
+							],
+							"sid": 362940335906992
 						}
 					],
 					"sid": 256455487874863

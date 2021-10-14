@@ -21,6 +21,18 @@
 			"type": "number",
 			"desc": "# of Gold Keys the player has.",
 			"sid": 740149225701535
+		},
+		{
+			"name": "isBlocking",
+			"type": "boolean",
+			"desc": "",
+			"sid": 812349946687241
+		},
+		{
+			"name": "isAttacking",
+			"type": "boolean",
+			"desc": "",
+			"sid": 317562506893837
 		}
 	],
 	"behaviorTypes": [
@@ -101,8 +113,31 @@
 					}
 				],
 				"sid": 836317403920063,
-				"name": "Combat",
-				"isLooping": true,
+				"name": "Attacking",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 1
+			},
+			{
+				"frames": [
+					{
+						"width": 61,
+						"height": 92,
+						"originX": 0.5245901639344263,
+						"originY": 0.5652173913043478,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 4602087,
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 256792028451081,
+				"name": "Blocking",
+				"isLooping": false,
 				"isPingPong": false,
 				"repeatCount": 1,
 				"repeatTo": 0,

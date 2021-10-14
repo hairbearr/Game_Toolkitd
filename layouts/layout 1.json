@@ -81,7 +81,9 @@
 					"instanceVariables": {
 						"Health": 5,
 						"GreenKeys": 0,
-						"GoldKeys": 0
+						"GoldKeys": 0,
+						"isBlocking": false,
+						"isAttacking": false
 					},
 					"behaviors": {
 						"ScrollTo": {
