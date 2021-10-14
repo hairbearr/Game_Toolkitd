@@ -709,6 +709,15 @@
 									}
 								},
 								{
+									"id": "set-animation",
+									"objectClass": "Player",
+									"sid": 305030690562260,
+									"parameters": {
+										"animation": "\"Attacking\"",
+										"from": "beginning"
+									}
+								},
+								{
 									"id": "wait",
 									"objectClass": "System",
 									"sid": 458984499270546,
@@ -723,6 +732,15 @@
 									"parameters": {
 										"instance-variable": "isAttacking",
 										"value": "false"
+									}
+								},
+								{
+									"id": "set-animation",
+									"objectClass": "Player",
+									"sid": 583588821609864,
+									"parameters": {
+										"animation": "\"Animation 1\"",
+										"from": "beginning"
 									}
 								}
 							],
@@ -782,6 +800,15 @@
 										"instance-variable": "isBlocking",
 										"value": "false"
 									}
+								},
+								{
+									"id": "set-animation",
+									"objectClass": "Player",
+									"sid": 554830901177047,
+									"parameters": {
+										"animation": "\"Animation 1\"",
+										"from": "beginning"
+									}
 								}
 							],
 							"sid": 563354557061029
@@ -806,6 +833,15 @@
 									"parameters": {
 										"instance-variable": "isBlocking",
 										"value": "true"
+									}
+								},
+								{
+									"id": "set-animation",
+									"objectClass": "Player",
+									"sid": 442596547859193,
+									"parameters": {
+										"animation": "\"Blocking\"",
+										"from": "beginning"
 									}
 								}
 							],
