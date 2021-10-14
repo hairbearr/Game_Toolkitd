@@ -619,29 +619,6 @@
 								}
 							],
 							"sid": 661002609549392
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "is-moving",
-									"objectClass": "Player",
-									"sid": 654472891826593,
-									"behaviorType": "8Direction"
-								}
-							],
-							"actions": [
-								{
-									"id": "set-animation",
-									"objectClass": "Player",
-									"sid": 682618153396316,
-									"parameters": {
-										"animation": "\"Animation 1\"",
-										"from": "beginning"
-									}
-								}
-							],
-							"sid": 570203737539424
 						}
 					],
 					"sid": 143317924451587
@@ -760,9 +737,9 @@
 								{
 									"id": "is-animation-playing",
 									"objectClass": "Player",
-									"sid": 539602941225332,
+									"sid": 628341189378016,
 									"parameters": {
-										"animation": "\"Combat\""
+										"animation": "\"Attacking\""
 									}
 								}
 							],
