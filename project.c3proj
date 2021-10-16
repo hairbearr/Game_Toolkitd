@@ -185,7 +185,8 @@
 			"TxtGreenKeys",
 			"TxtHealth",
 			"Mouse",
-			"Tilemap"
+			"Tilemap",
+			"hurtbox"
 		],
 		"subfolders": []
 	},
@@ -201,7 +202,7 @@
 		"items": [
 			"Layout 1",
 			"Layout 2",
-			"Layout 0"
+			"Menu"
 		],
 		"subfolders": []
 	},

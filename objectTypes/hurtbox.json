@@ -1,35 +1,29 @@
 {
-	"name": "Skeleton",
+	"name": "hurtbox",
 	"plugin-id": "Sprite",
-	"sid": 690074006622411,
+	"sid": 576761567412047,
 	"isGlobal": false,
 	"instanceVariables": [],
-	"behaviorTypes": [
-		{
-			"behaviorId": "Turret",
-			"name": "Turret",
-			"sid": 141339951787719
-		}
-	],
+	"behaviorTypes": [],
 	"effectTypes": [],
 	"animations": {
 		"items": [
 			{
 				"frames": [
 					{
-						"width": 250,
-						"height": 250,
-						"originX": 0.5,
+						"width": 51,
+						"height": 15,
+						"originX": 0,
 						"originY": 0.5,
 						"originalSource": "",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
-						"imageSpriteId": 9513406,
+						"imageSpriteId": 2013858,
 						"useCollisionPoly": true,
 						"duration": 1
 					}
 				],
-				"sid": 497991550420425,
+				"sid": 191358557763555,
 				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,

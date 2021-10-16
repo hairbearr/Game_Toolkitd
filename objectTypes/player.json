@@ -33,6 +33,24 @@
 			"type": "boolean",
 			"desc": "",
 			"sid": 317562506893837
+		},
+		{
+			"name": "isDashing",
+			"type": "boolean",
+			"desc": "",
+			"sid": 152608762596753
+		},
+		{
+			"name": "DashTimer",
+			"type": "number",
+			"desc": "",
+			"sid": 621877170839763
+		},
+		{
+			"name": "DashDistance",
+			"type": "number",
+			"desc": "",
+			"sid": 964864040996534
 		}
 	],
 	"behaviorTypes": [
@@ -62,6 +80,18 @@
 						"exportQuality": 0.8,
 						"imageSpriteId": 5097146,
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "Image Point 1",
+								"x": 0.5,
+								"y": 0.5
+							},
+							{
+								"name": "Image Point 2",
+								"x": 1,
+								"y": 0.5
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -74,6 +104,13 @@
 						"exportQuality": 0.8,
 						"imageSpriteId": 1609089,
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "Image Point 2",
+								"x": 1,
+								"y": 0.5
+							}
+						],
 						"duration": 1
 					}
 				],
@@ -96,19 +133,31 @@
 						"exportFormat": "png",
 						"exportQuality": 0.8,
 						"imageSpriteId": 8333311,
+						"collisionPoly": {
+							"points": [
+								0,
+								0,
+								0.4552238805970149,
+								0,
+								0.4552238805970149,
+								1,
+								0,
+								1
+							]
+						},
 						"useCollisionPoly": true,
-						"duration": 1
-					},
-					{
-						"width": 136,
-						"height": 92,
-						"originX": 0.23134328358208955,
-						"originY": 0.46464646464646464,
-						"originalSource": "",
-						"exportFormat": "png",
-						"exportQuality": 0.8,
-						"imageSpriteId": 8485884,
-						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "Image Point 1",
+								"x": 0.44776119402985076,
+								"y": 0.8484848484848485
+							},
+							{
+								"name": "Image Point 2",
+								"x": 0.47761194029850745,
+								"y": 0.48484848484848486
+							}
+						],
 						"duration": 1
 					}
 				],
@@ -132,6 +181,13 @@
 						"exportQuality": 0.8,
 						"imageSpriteId": 4602087,
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "Image Point 2",
+								"x": 1,
+								"y": 0.5
+							}
+						],
 						"duration": 1
 					}
 				],

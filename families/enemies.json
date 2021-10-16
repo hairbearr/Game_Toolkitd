@@ -8,6 +8,12 @@
 			"type": "number",
 			"desc": "Health of the Enemy",
 			"sid": 134965064741029
+		},
+		{
+			"name": "Wave",
+			"type": "number",
+			"desc": "",
+			"sid": 319336267821263
 		}
 	],
 	"behaviorTypes": [

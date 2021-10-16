@@ -387,6 +387,40 @@
 					"eventType": "block",
 					"conditions": [
 						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "Player",
+							"sid": 692234382540518,
+							"parameters": {
+								"instance-variable": "isDashing"
+							}
+						},
+						{
+							"id": "every-x-seconds",
+							"objectClass": "System",
+							"sid": 991985657621148,
+							"parameters": {
+								"interval-seconds": "1.0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "subtract-from-instvar",
+							"objectClass": "Player",
+							"sid": 994585874137323,
+							"parameters": {
+								"instance-variable": "DashTimer",
+								"value": "1"
+							}
+						}
+					],
+					"sid": 304131135285395,
+					"disabled": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
 							"id": "every-tick",
 							"objectClass": "System",
 							"sid": 631404372046263
@@ -619,6 +653,210 @@
 								}
 							],
 							"sid": 661002609549392
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-key-pressed",
+									"objectClass": "Keyboard",
+									"sid": 134106737764588,
+									"parameters": {
+										"key": 81
+									}
+								},
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "Player",
+									"sid": 586523301978824,
+									"parameters": {
+										"instance-variable": "isDashing"
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [],
+							"sid": 628988297853306,
+							"disabled": true,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "key-is-down",
+											"objectClass": "Keyboard",
+											"sid": 802011972306957,
+											"parameters": {
+												"key": 87
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-vector-y",
+											"objectClass": "Player",
+											"sid": 978498303674541,
+											"behaviorType": "8Direction",
+											"parameters": {
+												"vector-y": "Player.ImagePointY(2)+Player.DashDistance"
+											}
+										},
+										{
+											"id": "set-boolean-instvar",
+											"objectClass": "Player",
+											"sid": 435418198447011,
+											"parameters": {
+												"instance-variable": "isDashing",
+												"value": "true"
+											}
+										}
+									],
+									"sid": 512252622852401,
+									"disabled": true
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "key-is-down",
+											"objectClass": "Keyboard",
+											"sid": 421562066982331,
+											"parameters": {
+												"key": 65
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-vector-x",
+											"objectClass": "Player",
+											"sid": 392143124809572,
+											"behaviorType": "8Direction",
+											"parameters": {
+												"vector-x": "Player.ImagePointX(2)-Player.DashDistance"
+											}
+										},
+										{
+											"id": "set-boolean-instvar",
+											"objectClass": "Player",
+											"sid": 129855144374777,
+											"parameters": {
+												"instance-variable": "isDashing",
+												"value": "true"
+											}
+										}
+									],
+									"sid": 554933449063911,
+									"disabled": true
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "key-is-down",
+											"objectClass": "Keyboard",
+											"sid": 997163154512947,
+											"parameters": {
+												"key": 83
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-vector-y",
+											"objectClass": "Player",
+											"sid": 697358296231963,
+											"behaviorType": "8Direction",
+											"parameters": {
+												"vector-y": "Player.ImagePointY(2)-Player.DashDistance"
+											}
+										},
+										{
+											"id": "set-boolean-instvar",
+											"objectClass": "Player",
+											"sid": 106255326182779,
+											"parameters": {
+												"instance-variable": "isDashing",
+												"value": "true"
+											}
+										}
+									],
+									"sid": 606589904955451,
+									"disabled": true
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "key-is-down",
+											"objectClass": "Keyboard",
+											"sid": 309634323139748,
+											"parameters": {
+												"key": 68
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-vector-x",
+											"objectClass": "Player",
+											"sid": 749306673950983,
+											"behaviorType": "8Direction",
+											"parameters": {
+												"vector-x": "Player.ImagePointX(2)+Player.DashDistance"
+											}
+										},
+										{
+											"id": "set-boolean-instvar",
+											"objectClass": "Player",
+											"sid": 463119814679228,
+											"parameters": {
+												"instance-variable": "isDashing",
+												"value": "true"
+											}
+										}
+									],
+									"sid": 253266957015407,
+									"disabled": true
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "Player",
+									"sid": 307487238815980,
+									"parameters": {
+										"instance-variable": "DashTimer",
+										"comparison": 3,
+										"value": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "Player",
+									"sid": 904671958684023,
+									"parameters": {
+										"instance-variable": "isDashing",
+										"value": "false"
+									}
+								},
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Player",
+									"sid": 796109225837464,
+									"parameters": {
+										"instance-variable": "DashTimer",
+										"value": "6"
+									}
+								}
+							],
+							"sid": 754744111228004,
+							"disabled": true
 						}
 					],
 					"sid": 143317924451587
@@ -673,6 +911,15 @@
 										"mouse-button": "left",
 										"click-type": "clicked"
 									}
+								},
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "Player",
+									"sid": 804874944986079,
+									"parameters": {
+										"instance-variable": "isBlocking"
+									},
+									"isInverted": true
 								}
 							],
 							"actions": [
@@ -695,6 +942,17 @@
 									}
 								},
 								{
+									"id": "spawn-another-object",
+									"objectClass": "Player",
+									"sid": 874911683688167,
+									"parameters": {
+										"object": "hurtbox",
+										"layer": "1",
+										"image-point": "1",
+										"create-hierarchy": false
+									}
+								},
+								{
 									"id": "wait",
 									"objectClass": "System",
 									"sid": 458984499270546,
@@ -710,6 +968,11 @@
 										"instance-variable": "isAttacking",
 										"value": "false"
 									}
+								},
+								{
+									"id": "destroy",
+									"objectClass": "hurtbox",
+									"sid": 977913498787496
 								},
 								{
 									"id": "set-animation",
@@ -728,18 +991,10 @@
 							"conditions": [
 								{
 									"id": "on-collision-with-another-object",
-									"objectClass": "Player",
-									"sid": 379510346791712,
+									"objectClass": "hurtbox",
+									"sid": 921062482748672,
 									"parameters": {
 										"object": "Enemies"
-									}
-								},
-								{
-									"id": "is-animation-playing",
-									"objectClass": "Player",
-									"sid": 628341189378016,
-									"parameters": {
-										"animation": "\"Attacking\""
 									}
 								}
 							],
