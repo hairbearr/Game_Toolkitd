@@ -71,6 +71,14 @@
 			"bundled": false
 		},
 		{
+			"type": "plugin",
+			"id": "Tilemap",
+			"name": "Tilemap",
+			"author": "Scirra",
+			"version": "r260",
+			"bundled": false
+		},
+		{
 			"type": "behavior",
 			"id": "scrollto",
 			"name": "Scroll To",
@@ -82,22 +90,6 @@
 			"type": "behavior",
 			"id": "EightDir",
 			"name": "8 Direction",
-			"author": "Scirra",
-			"version": "r260",
-			"bundled": false
-		},
-		{
-			"type": "behavior",
-			"id": "solid",
-			"name": "Solid",
-			"author": "Scirra",
-			"version": "r260",
-			"bundled": false
-		},
-		{
-			"type": "behavior",
-			"id": "shadowcaster",
-			"name": "Shadow caster",
 			"author": "Scirra",
 			"version": "r260",
 			"bundled": false
@@ -144,6 +136,14 @@
 		},
 		{
 			"type": "behavior",
+			"id": "solid",
+			"name": "Solid",
+			"author": "Scirra",
+			"version": "r260",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
 			"id": "LOS",
 			"name": "Line of sight",
 			"author": "Scirra",
@@ -163,7 +163,6 @@
 	"objectTypes": {
 		"items": [
 			"Player",
-			"Wall",
 			"ShadowLight",
 			"Skeleton",
 			"Arrow",
@@ -185,7 +184,8 @@
 			"TiledBackground2",
 			"TxtGreenKeys",
 			"TxtHealth",
-			"Mouse"
+			"Mouse",
+			"Tilemap"
 		],
 		"subfolders": []
 	},
