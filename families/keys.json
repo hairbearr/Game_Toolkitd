@@ -1,0 +1,19 @@
+{
+	"name": "Keys",
+	"plugin-id": "Sprite",
+	"sid": 484044953585606,
+	"instanceVariables": [
+		{
+			"name": "KeyID",
+			"type": "number",
+			"desc": "",
+			"sid": 219251915942310
+		}
+	],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"members": [
+		"Key",
+		"GreenKey"
+	]
+}

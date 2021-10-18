@@ -51,6 +51,12 @@
 			"type": "number",
 			"desc": "",
 			"sid": 964864040996534
+		},
+		{
+			"name": "TooltipIndex",
+			"type": "number",
+			"desc": "",
+			"sid": 256666490101832
 		}
 	],
 	"behaviorTypes": [

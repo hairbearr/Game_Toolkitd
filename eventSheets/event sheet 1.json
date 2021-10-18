@@ -96,15 +96,27 @@
 							"eventType": "block",
 							"conditions": [
 								{
-									"id": "on-collision-with-another-object",
+									"id": "is-overlapping-another-object",
 									"objectClass": "Monster",
-									"sid": 550312825765743,
+									"sid": 716351366480005,
 									"parameters": {
 										"object": "Player"
 									}
 								}
 							],
-							"actions": [],
+							"actions": [
+								{
+									"id": "shake",
+									"objectClass": "Player",
+									"sid": 924973185617988,
+									"behaviorType": "ScrollTo",
+									"parameters": {
+										"magnitude": "30",
+										"duration": "1.0",
+										"mode": "reducing-magnitude"
+									}
+								}
+							],
 							"sid": 619704437507253,
 							"children": [
 								{
@@ -119,19 +131,7 @@
 											}
 										}
 									],
-									"actions": [
-										{
-											"id": "shake",
-											"objectClass": "Player",
-											"sid": 634203193743772,
-											"behaviorType": "ScrollTo",
-											"parameters": {
-												"magnitude": "30",
-												"duration": "1.0",
-												"mode": "reducing-magnitude"
-											}
-										}
-									],
+									"actions": [],
 									"sid": 171622293805775
 								},
 								{
@@ -148,17 +148,6 @@
 										}
 									],
 									"actions": [
-										{
-											"id": "shake",
-											"objectClass": "Player",
-											"sid": 476147453385803,
-											"behaviorType": "ScrollTo",
-											"parameters": {
-												"magnitude": "30",
-												"duration": "1.0",
-												"mode": "reducing-magnitude"
-											}
-										},
 										{
 											"id": "subtract-from-instvar",
 											"objectClass": "Player",
@@ -177,6 +166,14 @@
 												"layer": "1",
 												"image-point": "0",
 												"create-hierarchy": false
+											}
+										},
+										{
+											"id": "wait",
+											"objectClass": "System",
+											"sid": 673850210673580,
+											"parameters": {
+												"seconds": "1.0"
 											}
 										}
 									],
@@ -231,10 +228,10 @@
 								{
 									"id": "spawn-another-object",
 									"objectClass": "Skeleton",
-									"sid": 415066087185331,
+									"sid": 928422342111892,
 									"parameters": {
 										"object": "Arrow",
-										"layer": "1",
+										"layer": "0",
 										"image-point": "0",
 										"create-hierarchy": false
 									}
@@ -944,10 +941,10 @@
 								{
 									"id": "spawn-another-object",
 									"objectClass": "Player",
-									"sid": 874911683688167,
+									"sid": 832604291219505,
 									"parameters": {
 										"object": "hurtbox",
-										"layer": "1",
+										"layer": "0",
 										"image-point": "1",
 										"create-hierarchy": false
 									}
@@ -1078,9 +1075,175 @@
 								}
 							],
 							"sid": 362940335906992
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-collision-with-another-object",
+									"objectClass": "hurtbox",
+									"sid": 518130894570337,
+									"parameters": {
+										"object": "Tilemap"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "destroy",
+									"objectClass": "hurtbox",
+									"sid": 318188297249892
+								}
+							],
+							"sid": 247190037243747
 						}
 					],
 					"sid": 256455487874863
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "Player",
+							"sid": 951132896621376,
+							"parameters": {
+								"instance-variable": "TooltipIndex",
+								"comparison": 0,
+								"value": "1"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 848385023902532,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [],
+							"actions": [
+								{
+									"id": "set-text",
+									"objectClass": "TxtTooltip",
+									"sid": 730506564563489,
+									"parameters": {
+										"text": "\"Use the Left Mouse Button to swing your sword.\""
+									}
+								},
+								{
+									"id": "start-fade",
+									"objectClass": "TxtTooltip",
+									"sid": 840191605009596,
+									"behaviorType": "Fade"
+								}
+							],
+							"sid": 613231783331939
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "Player",
+							"sid": 726280861434615,
+							"parameters": {
+								"instance-variable": "TooltipIndex",
+								"comparison": 0,
+								"value": "2"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 462059093693670,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [],
+							"actions": [
+								{
+									"id": "set-text",
+									"objectClass": "TxtTooltip",
+									"sid": 920426996666493,
+									"parameters": {
+										"text": "\"Fire Elementals burn through your armor, best that they not touch you\""
+									}
+								},
+								{
+									"id": "start-fade",
+									"objectClass": "TxtTooltip",
+									"sid": 789090641002151,
+									"behaviorType": "Fade"
+								}
+							],
+							"sid": 340690755368857
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "Player",
+							"sid": 117946285366325,
+							"parameters": {
+								"instance-variable": "TooltipIndex",
+								"comparison": 0,
+								"value": "3"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 154719647125517,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [],
+							"actions": [
+								{
+									"id": "set-text",
+									"objectClass": "TxtTooltip",
+									"sid": 966010025533648,
+									"parameters": {
+										"text": "\"Use the Right Mouse Button to use your shield to block projectiles.\""
+									}
+								},
+								{
+									"id": "start-fade",
+									"objectClass": "TxtTooltip",
+									"sid": 593031803720780,
+									"behaviorType": "Fade"
+								}
+							],
+							"sid": 843536291521360
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-x-seconds",
+							"objectClass": "System",
+							"sid": 213042300066365,
+							"parameters": {
+								"interval-seconds": "5"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "add-to-instvar",
+							"objectClass": "Player",
+							"sid": 261839529396889,
+							"parameters": {
+								"instance-variable": "TooltipIndex",
+								"value": "1"
+							}
+						}
+					],
+					"sid": 372040977181989
 				}
 			],
 			"sid": 874975563186382
@@ -1125,9 +1288,138 @@
 										"instance-variable": "GoldKeys",
 										"value": "1"
 									}
+								},
+								{
+									"id": "set-text",
+									"objectClass": "TxtTooltip",
+									"sid": 349285370978842,
+									"parameters": {
+										"text": "\"This key looks like it could unlock a chest\""
+									}
+								},
+								{
+									"id": "set-fade-out-time",
+									"objectClass": "TxtTooltip",
+									"sid": 340353952379083,
+									"behaviorType": "Fade",
+									"parameters": {
+										"fade-out-time": "2"
+									}
+								},
+								{
+									"id": "start-fade",
+									"objectClass": "TxtTooltip",
+									"sid": 386343938722878,
+									"behaviorType": "Fade"
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 555048530499053,
+									"parameters": {
+										"seconds": "2"
+									}
+								},
+								{
+									"id": "flash",
+									"objectClass": "TiledBackground2",
+									"sid": 633336355030525,
+									"behaviorType": "Flash",
+									"parameters": {
+										"on-time": "0.1",
+										"off-time": "0.1",
+										"duration": "2"
+									}
+								},
+								{
+									"id": "set-text",
+									"objectClass": "TxtTooltip",
+									"sid": 886270850253711,
+									"parameters": {
+										"text": "\"More monsters?!\""
+									}
+								},
+								{
+									"id": "restart-fade",
+									"objectClass": "TxtTooltip",
+									"sid": 721209325080164,
+									"behaviorType": "Fade"
 								}
 							],
-							"sid": 904994981055553
+							"sid": 904994981055553,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "Key",
+											"sid": 605579334325088,
+											"parameters": {
+												"instance-variable": "KeyID",
+												"comparison": 0,
+												"value": "0"
+											}
+										}
+									],
+									"actions": [],
+									"sid": 553486226814171,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-instance-variable",
+													"objectClass": "Enemies",
+													"sid": 474874190096732,
+													"parameters": {
+														"instance-variable": "Wave",
+														"comparison": 0,
+														"value": "1"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-enabled",
+													"objectClass": "Skeleton",
+													"sid": 699638119726166,
+													"behaviorType": "Turret",
+													"parameters": {
+														"state": "enabled"
+													}
+												},
+												{
+													"id": "set-enabled",
+													"objectClass": "Monster",
+													"sid": 556313945430796,
+													"behaviorType": "MoveTo",
+													"parameters": {
+														"enabled": true
+													}
+												},
+												{
+													"id": "set-visible",
+													"objectClass": "Enemies",
+													"sid": 589540415457040,
+													"parameters": {
+														"visibility": "visible"
+													}
+												},
+												{
+													"id": "set-collisions-enabled",
+													"objectClass": "Enemies",
+													"sid": 775068597219288,
+													"parameters": {
+														"collisions": "enabled"
+													}
+												}
+											],
+											"sid": 201052594139557
+										}
+									]
+								}
+							]
 						},
 						{
 							"eventType": "block",
@@ -1155,9 +1447,87 @@
 										"instance-variable": "GreenKeys",
 										"value": "1"
 									}
+								},
+								{
+									"id": "set-text",
+									"objectClass": "TxtTooltip",
+									"sid": 177273257134946,
+									"parameters": {
+										"text": "\"This key looks like it could unlock a door\""
+									}
+								},
+								{
+									"id": "start-fade",
+									"objectClass": "TxtTooltip",
+									"sid": 243357984128053,
+									"behaviorType": "Fade"
 								}
 							],
-							"sid": 640822130646478
+							"sid": 640822130646478,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "GreenKey",
+											"sid": 523304282866720,
+											"parameters": {
+												"instance-variable": "KeyID",
+												"comparison": 0,
+												"value": "0"
+											}
+										}
+									],
+									"actions": [],
+									"sid": 577158418564758,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-instance-variable",
+													"objectClass": "Spikes",
+													"sid": 905120765957546,
+													"parameters": {
+														"instance-variable": "SpikeID",
+														"comparison": 0,
+														"value": "0"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-visible",
+													"objectClass": "Spikes",
+													"sid": 988074040696470,
+													"parameters": {
+														"visibility": "visible"
+													}
+												},
+												{
+													"id": "set-active",
+													"objectClass": "Spikes",
+													"sid": 578636590028817,
+													"behaviorType": "Sine",
+													"parameters": {
+														"state": "active"
+													}
+												},
+												{
+													"id": "set-collisions-enabled",
+													"objectClass": "Spikes",
+													"sid": 521664446186413,
+													"parameters": {
+														"collisions": "enabled"
+													}
+												}
+											],
+											"sid": 521563687150431
+										}
+									]
+								}
+							]
 						},
 						{
 							"eventType": "block",
@@ -1337,6 +1707,27 @@
 				}
 			],
 			"sid": 131216341273536
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 845917536332588
+				}
+			],
+			"actions": [
+				{
+					"id": "set-text",
+					"objectClass": "TxtTooltip",
+					"sid": 916718430064034,
+					"parameters": {
+						"text": "\"\""
+					}
+				}
+			],
+			"sid": 150787322322122
 		}
 	],
 	"sid": 789898715502506

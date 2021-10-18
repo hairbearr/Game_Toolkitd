@@ -136,8 +136,24 @@
 		},
 		{
 			"type": "behavior",
+			"id": "Flash",
+			"name": "Flash",
+			"author": "Scirra",
+			"version": "r260",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
 			"id": "solid",
 			"name": "Solid",
+			"author": "Scirra",
+			"version": "r260",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Fade",
+			"name": "Fade",
 			"author": "Scirra",
 			"version": "r260",
 			"bundled": false
@@ -186,7 +202,8 @@
 			"TxtHealth",
 			"Mouse",
 			"Tilemap",
-			"hurtbox"
+			"hurtbox",
+			"TxtTooltip"
 		],
 		"subfolders": []
 	},
@@ -194,7 +211,8 @@
 	"containers": [],
 	"families": {
 		"items": [
-			"Enemies"
+			"Enemies",
+			"Keys"
 		],
 		"subfolders": []
 	},

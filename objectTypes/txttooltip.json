@@ -1,0 +1,15 @@
+{
+	"name": "TxtTooltip",
+	"plugin-id": "Text",
+	"sid": 940134729564205,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Fade",
+			"name": "Fade",
+			"sid": 990495969989503
+		}
+	],
+	"effectTypes": []
+}
