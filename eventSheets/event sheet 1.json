@@ -123,35 +123,19 @@
 									"eventType": "block",
 									"conditions": [
 										{
-											"id": "is-boolean-instance-variable-set",
-											"objectClass": "Player",
-											"sid": 945630326832956,
+											"id": "every-x-seconds",
+											"objectClass": "System",
+											"sid": 660354526420100,
 											"parameters": {
-												"instance-variable": "isBlocking"
+												"interval-seconds": "1.0"
 											}
-										}
-									],
-									"actions": [],
-									"sid": 171622293805775
-								},
-								{
-									"eventType": "block",
-									"conditions": [
-										{
-											"id": "is-boolean-instance-variable-set",
-											"objectClass": "Player",
-											"sid": 354064736389534,
-											"parameters": {
-												"instance-variable": "isBlocking"
-											},
-											"isInverted": true
 										}
 									],
 									"actions": [
 										{
 											"id": "subtract-from-instvar",
 											"objectClass": "Player",
-											"sid": 700944975457698,
+											"sid": 523027526462963,
 											"parameters": {
 												"instance-variable": "Health",
 												"value": "1"
@@ -160,24 +144,16 @@
 										{
 											"id": "spawn-another-object",
 											"objectClass": "Player",
-											"sid": 371319556161089,
+											"sid": 420664814812909,
 											"parameters": {
 												"object": "Blood",
 												"layer": "1",
 												"image-point": "0",
 												"create-hierarchy": false
 											}
-										},
-										{
-											"id": "wait",
-											"objectClass": "System",
-											"sid": 673850210673580,
-											"parameters": {
-												"seconds": "1.0"
-											}
 										}
 									],
-									"sid": 770583166275006
+									"sid": 777618596345326
 								}
 							]
 						}
@@ -482,6 +458,17 @@
 							],
 							"actions": [
 								{
+									"id": "spawn-another-object",
+									"objectClass": "Tresure_chest",
+									"sid": 101321956070163,
+									"parameters": {
+										"object": "GreenKey",
+										"layer": "1",
+										"image-point": "0",
+										"create-hierarchy": false
+									}
+								},
+								{
 									"id": "destroy",
 									"objectClass": "Tresure_chest",
 									"sid": 304138276254196
@@ -493,17 +480,6 @@
 									"parameters": {
 										"instance-variable": "GoldKeys",
 										"value": "Tresure_chest.GoldKeysNeeded"
-									}
-								},
-								{
-									"id": "spawn-another-object",
-									"objectClass": "Tresure_chest",
-									"sid": 151857926527299,
-									"parameters": {
-										"object": "GreenKey",
-										"layer": "1",
-										"image-point": "0",
-										"create-hierarchy": false
 									}
 								}
 							],
@@ -1276,17 +1252,20 @@
 							],
 							"actions": [
 								{
-									"id": "destroy",
-									"objectClass": "Key",
-									"sid": 689041999598211
-								},
-								{
 									"id": "add-to-instvar",
 									"objectClass": "Player",
 									"sid": 325935482796311,
 									"parameters": {
 										"instance-variable": "GoldKeys",
 										"value": "1"
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "Key",
+									"sid": 970901578144058,
+									"parameters": {
+										"visibility": "invisible"
 									}
 								},
 								{
@@ -1413,6 +1392,11 @@
 													"parameters": {
 														"collisions": "enabled"
 													}
+												},
+												{
+													"id": "destroy",
+													"objectClass": "Key",
+													"sid": 418962092760549
 												}
 											],
 											"sid": 201052594139557
