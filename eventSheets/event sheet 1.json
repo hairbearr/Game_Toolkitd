@@ -115,6 +115,17 @@
 										"duration": "1.0",
 										"mode": "reducing-magnitude"
 									}
+								},
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 396674189795047,
+									"parameters": {
+										"audio-file": "Spike Trap I Sound Effect I",
+										"loop": "not-looping",
+										"volume": "-10",
+										"tag-optional": "\"\""
+									}
 								}
 							],
 							"sid": 619704437507253,
@@ -219,6 +230,17 @@
 									"behaviorType": "Bullet",
 									"parameters": {
 										"speed": "400"
+									}
+								},
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 134565977500798,
+									"parameters": {
+										"audio-file": "sf_laser_14",
+										"loop": "not-looping",
+										"volume": "-10",
+										"tag-optional": "\"\""
 									}
 								}
 							],
@@ -955,6 +977,17 @@
 										"animation": "\"Animation 1\"",
 										"from": "beginning"
 									}
+								},
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 382483609215092,
+									"parameters": {
+										"audio-file": "mixkit-metal-hit-woosh-1485",
+										"loop": "not-looping",
+										"volume": "-10",
+										"tag-optional": "\"\""
+									}
 								}
 							],
 							"sid": 698702125191659
@@ -1323,6 +1356,17 @@
 									"objectClass": "TxtTooltip",
 									"sid": 721209325080164,
 									"behaviorType": "Fade"
+								},
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 533509939300323,
+									"parameters": {
+										"audio-file": "Coin Pick Up - Sound Effect - 2017",
+										"loop": "not-looping",
+										"volume": "-10",
+										"tag-optional": "\"\""
+									}
 								}
 							],
 							"sid": 904994981055553,
@@ -1445,6 +1489,17 @@
 									"objectClass": "TxtTooltip",
 									"sid": 243357984128053,
 									"behaviorType": "Fade"
+								},
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 542632768712332,
+									"parameters": {
+										"audio-file": "Coin Pick Up - Sound Effect - 2017",
+										"loop": "not-looping",
+										"volume": "-10",
+										"tag-optional": "\"\""
+									}
 								}
 							],
 							"sid": 640822130646478,
@@ -1603,6 +1658,17 @@
 									"id": "destroy",
 									"objectClass": "Health",
 									"sid": 108562604357467
+								},
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 826683292782847,
+									"parameters": {
+										"audio-file": "Coin Pick Up - Sound Effect - 2017",
+										"loop": "not-looping",
+										"volume": "-10",
+										"tag-optional": "\"\""
+									}
 								}
 							],
 							"sid": 428365528664193
@@ -1663,6 +1729,17 @@
 								"image-point": "0",
 								"create-hierarchy": false
 							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 183325419697560,
+							"parameters": {
+								"audio-file": "Spike Trap I Sound Effect I",
+								"loop": "not-looping",
+								"volume": "-10",
+								"tag-optional": "\"\""
+							}
 						}
 					],
 					"sid": 236831263549946,
@@ -1705,9 +1782,20 @@
 				{
 					"id": "set-text",
 					"objectClass": "TxtTooltip",
-					"sid": 916718430064034,
+					"sid": 476783030206474,
 					"parameters": {
 						"text": "\"\""
+					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 453296127883726,
+					"parameters": {
+						"audio-file": "Ye Old Tavern Music - Medieval Fantasy Background Music - No Copyright",
+						"loop": "looping",
+						"volume": "-20",
+						"tag-optional": "\"\""
 					}
 				}
 			],

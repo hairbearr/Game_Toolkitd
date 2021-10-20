@@ -79,6 +79,14 @@
 			"bundled": false
 		},
 		{
+			"type": "plugin",
+			"id": "Audio",
+			"name": "Audio",
+			"author": "Scirra",
+			"version": "r268",
+			"bundled": false
+		},
+		{
 			"type": "behavior",
 			"id": "scrollto",
 			"name": "Scroll To",
@@ -203,7 +211,8 @@
 			"Mouse",
 			"Tilemap",
 			"hurtbox",
-			"TxtTooltip"
+			"TxtTooltip",
+			"Audio"
 		],
 		"subfolders": []
 	},
@@ -237,7 +246,33 @@
 			"subfolders": []
 		},
 		"sound": {
-			"items": [],
+			"items": [
+				{
+					"name": "Coin Pick Up - Sound Effect - 2017.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 821877535158211
+				},
+				{
+					"name": "Spike Trap I Sound Effect I.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 474371995266028
+				},
+				{
+					"name": "sf_laser_14.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 660271396912679
+				},
+				{
+					"name": "mixkit-metal-hit-woosh-1485.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 939024558512246
+				},
+				{
+					"name": "Ye Old Tavern Music - Medieval Fantasy Background Music - No Copyright.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 676282865672872
+				}
+			],
 			"subfolders": []
 		},
 		"music": {
