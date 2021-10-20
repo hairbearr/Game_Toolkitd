@@ -1,0 +1,60 @@
+{
+	"name": "Event Menu",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-clicked",
+					"objectClass": "RestartLevelButton",
+					"sid": 755187428265404
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 207894404201035,
+					"parameters": {
+						"layout": "Level One"
+					}
+				}
+			],
+			"sid": 786791911023431
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 410151975981696
+				},
+				{
+					"id": "is-tag-playing",
+					"objectClass": "Audio",
+					"sid": 424769610478658,
+					"parameters": {
+						"tag": "\"Background Music\""
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 511151477671304,
+					"parameters": {
+						"audio-file": "Ye Old Tavern Music - Medieval Fantasy Background Music - No Copyright",
+						"loop": "looping",
+						"volume": "-20",
+						"tag-optional": "\"Background Music\""
+					}
+				}
+			],
+			"sid": 193714195137618
+		}
+	],
+	"sid": 372723926842306
+}

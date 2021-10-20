@@ -1,5 +1,5 @@
 {
-	"name": "Event sheet 1",
+	"name": "Event Game",
 	"events": [
 		{
 			"eventType": "group",
@@ -104,30 +104,7 @@
 									}
 								}
 							],
-							"actions": [
-								{
-									"id": "shake",
-									"objectClass": "Player",
-									"sid": 924973185617988,
-									"behaviorType": "ScrollTo",
-									"parameters": {
-										"magnitude": "30",
-										"duration": "1.0",
-										"mode": "reducing-magnitude"
-									}
-								},
-								{
-									"id": "play",
-									"objectClass": "Audio",
-									"sid": 396674189795047,
-									"parameters": {
-										"audio-file": "Spike Trap I Sound Effect I",
-										"loop": "not-looping",
-										"volume": "-10",
-										"tag-optional": "\"\""
-									}
-								}
-							],
+							"actions": [],
 							"sid": 619704437507253,
 							"children": [
 								{
@@ -143,6 +120,17 @@
 										}
 									],
 									"actions": [
+										{
+											"id": "shake",
+											"objectClass": "Player",
+											"sid": 979402560824239,
+											"behaviorType": "ScrollTo",
+											"parameters": {
+												"magnitude": "15",
+												"duration": "1.0",
+												"mode": "reducing-magnitude"
+											}
+										},
 										{
 											"id": "subtract-from-instvar",
 											"objectClass": "Player",
@@ -161,6 +149,17 @@
 												"layer": "1",
 												"image-point": "0",
 												"create-hierarchy": false
+											}
+										},
+										{
+											"id": "play",
+											"objectClass": "Audio",
+											"sid": 190293046847486,
+											"parameters": {
+												"audio-file": "Spike Trap I Sound Effect I",
+												"loop": "not-looping",
+												"volume": "-10",
+												"tag-optional": "\"\""
 											}
 										}
 									],
@@ -285,36 +284,21 @@
 									}
 								}
 							],
-							"actions": [],
+							"actions": [
+								{
+									"id": "shake",
+									"objectClass": "Player",
+									"sid": 202727750540319,
+									"behaviorType": "ScrollTo",
+									"parameters": {
+										"magnitude": "15",
+										"duration": "1.0",
+										"mode": "reducing-magnitude"
+									}
+								}
+							],
 							"sid": 834273680051392,
 							"children": [
-								{
-									"eventType": "block",
-									"conditions": [
-										{
-											"id": "is-boolean-instance-variable-set",
-											"objectClass": "Player",
-											"sid": 220147998379982,
-											"parameters": {
-												"instance-variable": "isBlocking"
-											}
-										}
-									],
-									"actions": [
-										{
-											"id": "shake",
-											"objectClass": "Player",
-											"sid": 377497325221984,
-											"behaviorType": "ScrollTo",
-											"parameters": {
-												"magnitude": "30",
-												"duration": "1.0",
-												"mode": "reducing-magnitude"
-											}
-										}
-									],
-									"sid": 999841528274794
-								},
 								{
 									"eventType": "block",
 									"conditions": [
@@ -329,17 +313,6 @@
 										}
 									],
 									"actions": [
-										{
-											"id": "shake",
-											"objectClass": "Player",
-											"sid": 204183426761971,
-											"behaviorType": "ScrollTo",
-											"parameters": {
-												"magnitude": "30",
-												"duration": "1.0",
-												"mode": "reducing-magnitude"
-											}
-										},
 										{
 											"id": "subtract-from-instvar",
 											"objectClass": "Player",
@@ -482,10 +455,10 @@
 								{
 									"id": "spawn-another-object",
 									"objectClass": "Tresure_chest",
-									"sid": 101321956070163,
+									"sid": 303137287892053,
 									"parameters": {
 										"object": "GreenKey",
-										"layer": "1",
+										"layer": "0",
 										"image-point": "0",
 										"create-hierarchy": false
 									}
@@ -1123,29 +1096,48 @@
 							}
 						}
 					],
-					"actions": [],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "TxtTooltip",
+							"sid": 737706299386016,
+							"parameters": {
+								"text": "\"Use the Left Mouse Button to swing your sword.\""
+							}
+						},
+						{
+							"id": "start-fade",
+							"objectClass": "TxtTooltip",
+							"sid": 435273398848455,
+							"behaviorType": "Fade"
+						}
+					],
 					"sid": 848385023902532,
 					"children": [
 						{
 							"eventType": "block",
-							"conditions": [],
+							"conditions": [
+								{
+									"id": "on-click",
+									"objectClass": "Mouse",
+									"sid": 911052683850915,
+									"parameters": {
+										"mouse-button": "left",
+										"click-type": "clicked"
+									}
+								}
+							],
 							"actions": [
 								{
 									"id": "set-text",
 									"objectClass": "TxtTooltip",
-									"sid": 730506564563489,
+									"sid": 960759776571307,
 									"parameters": {
-										"text": "\"Use the Left Mouse Button to swing your sword.\""
+										"text": "\"\""
 									}
-								},
-								{
-									"id": "start-fade",
-									"objectClass": "TxtTooltip",
-									"sid": 840191605009596,
-									"behaviorType": "Fade"
 								}
 							],
-							"sid": 613231783331939
+							"sid": 465035367236696
 						}
 					]
 				},
@@ -1163,29 +1155,48 @@
 							}
 						}
 					],
-					"actions": [],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "TxtTooltip",
+							"sid": 816724391005431,
+							"parameters": {
+								"text": "\"Fire Elementals burn through your armor, best that they not touch you\""
+							}
+						},
+						{
+							"id": "start-fade",
+							"objectClass": "TxtTooltip",
+							"sid": 623893086054690,
+							"behaviorType": "Fade"
+						}
+					],
 					"sid": 462059093693670,
 					"children": [
 						{
 							"eventType": "block",
-							"conditions": [],
+							"conditions": [
+								{
+									"id": "on-click",
+									"objectClass": "Mouse",
+									"sid": 463802299915779,
+									"parameters": {
+										"mouse-button": "right",
+										"click-type": "clicked"
+									}
+								}
+							],
 							"actions": [
 								{
 									"id": "set-text",
 									"objectClass": "TxtTooltip",
-									"sid": 920426996666493,
+									"sid": 676383209587350,
 									"parameters": {
-										"text": "\"Fire Elementals burn through your armor, best that they not touch you\""
+										"text": "\"\""
 									}
-								},
-								{
-									"id": "start-fade",
-									"objectClass": "TxtTooltip",
-									"sid": 789090641002151,
-									"behaviorType": "Fade"
 								}
 							],
-							"sid": 340690755368857
+							"sid": 546203127505637
 						}
 					]
 				},
@@ -1203,26 +1214,45 @@
 							}
 						}
 					],
-					"actions": [],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "TxtTooltip",
+							"sid": 181616562589057,
+							"parameters": {
+								"text": "\"Use the Right Mouse Button to use your shield to block projectiles.\""
+							}
+						},
+						{
+							"id": "start-fade",
+							"objectClass": "TxtTooltip",
+							"sid": 602340881743452,
+							"behaviorType": "Fade"
+						}
+					],
 					"sid": 154719647125517,
 					"children": [
 						{
 							"eventType": "block",
-							"conditions": [],
+							"conditions": [
+								{
+									"id": "on-click",
+									"objectClass": "Mouse",
+									"sid": 772709061861676,
+									"parameters": {
+										"mouse-button": "right",
+										"click-type": "clicked"
+									}
+								}
+							],
 							"actions": [
 								{
 									"id": "set-text",
 									"objectClass": "TxtTooltip",
-									"sid": 966010025533648,
+									"sid": 968365406629468,
 									"parameters": {
-										"text": "\"Use the Right Mouse Button to use your shield to block projectiles.\""
+										"text": "\"\""
 									}
-								},
-								{
-									"id": "start-fade",
-									"objectClass": "TxtTooltip",
-									"sid": 593031803720780,
-									"behaviorType": "Fade"
 								}
 							],
 							"sid": 843536291521360
@@ -1463,11 +1493,6 @@
 							],
 							"actions": [
 								{
-									"id": "destroy",
-									"objectClass": "GreenKey",
-									"sid": 370184243137682
-								},
-								{
 									"id": "add-to-instvar",
 									"objectClass": "Player",
 									"sid": 105976189994825,
@@ -1560,6 +1585,11 @@
 													"parameters": {
 														"collisions": "enabled"
 													}
+												},
+												{
+													"id": "destroy",
+													"objectClass": "GreenKey",
+													"sid": 125335703095155
 												}
 											],
 											"sid": 521563687150431
@@ -1711,10 +1741,10 @@
 						{
 							"id": "shake",
 							"objectClass": "Player",
-							"sid": 263903078708948,
+							"sid": 211620567637911,
 							"behaviorType": "ScrollTo",
 							"parameters": {
-								"magnitude": "30",
+								"magnitude": "15",
 								"duration": "1.0",
 								"mode": "reducing-magnitude"
 							}
@@ -1785,17 +1815,6 @@
 					"sid": 476783030206474,
 					"parameters": {
 						"text": "\"\""
-					}
-				},
-				{
-					"id": "play",
-					"objectClass": "Audio",
-					"sid": 453296127883726,
-					"parameters": {
-						"audio-file": "Ye Old Tavern Music - Medieval Fantasy Background Music - No Copyright",
-						"loop": "looping",
-						"volume": "-20",
-						"tag-optional": "\"\""
 					}
 				}
 			],

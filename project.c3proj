@@ -227,16 +227,16 @@
 	},
 	"layouts": {
 		"items": [
-			"Layout 1",
-			"Layout 2",
+			"Level One",
+			"Win Screen",
 			"Menu"
 		],
 		"subfolders": []
 	},
 	"eventSheets": {
 		"items": [
-			"Event sheet 1",
-			"Event sheet 2"
+			"Event Game",
+			"Event Menu"
 		],
 		"subfolders": []
 	},
@@ -405,12 +405,12 @@
 		"renderingMode": "auto",
 		"anisotropicFiltering": "auto",
 		"maxSpriteSheetSize": 2048,
-		"loaderStyle": "splash",
+		"loaderStyle": "progress",
 		"preloadSounds": true,
 		"cordovaiOSScheme": "app",
 		"cordovaAndroidScheme": "file"
 	},
 	"viewportWidth": 1000,
 	"viewportHeight": 500,
-	"firstLayout": null
+	"firstLayout": "Menu"
 }

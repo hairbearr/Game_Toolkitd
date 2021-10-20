@@ -46,7 +46,7 @@
 					"type": "RestartLevelButton",
 					"properties": {
 						"type": "button",
-						"text": "Start Demo",
+						"text": "Start Game",
 						"tooltip": "",
 						"initially-visible": true,
 						"enabled": true,
@@ -58,8 +58,8 @@
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 337,
-						"y": 180,
+						"x": 444.60724716188474,
+						"y": 226.13806526599654,
 						"width": 111,
 						"height": 47,
 						"originX": 0,
@@ -75,10 +75,10 @@
 				{
 					"type": "Title",
 					"properties": {
-						"text": "Dungeon Crawl Toolkit Demo",
+						"text": "Cave Delver",
 						"enable-bbcode": true,
-						"font": "Arial",
-						"size": 12,
+						"font": "Avant Garde",
+						"size": 60,
 						"line-height": 0,
 						"bold": false,
 						"italic": false,
@@ -88,8 +88,8 @@
 							1,
 							1
 						],
-						"horizontal-alignment": "left",
-						"vertical-alignment": "top",
+						"horizontal-alignment": "center",
+						"vertical-alignment": "center",
 						"wrapping": "word",
 						"initially-visible": true,
 						"origin": "top-left"
@@ -98,10 +98,52 @@
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 288,
-						"y": 128,
-						"width": 216,
-						"height": 30,
+						"x": 173.05684754653316,
+						"y": 138.1112471101614,
+						"width": 654.4431524534668,
+						"height": 81.88875288983861,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Title",
+					"properties": {
+						"text": "by Group H",
+						"enable-bbcode": true,
+						"font": "Avant Garde",
+						"size": 24,
+						"line-height": 0,
+						"bold": false,
+						"italic": false,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"horizontal-alignment": "center",
+						"vertical-alignment": "center",
+						"wrapping": "word",
+						"initially-visible": true,
+						"origin": "top-left"
+					},
+					"uid": 79,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 598,
+						"y": 205,
+						"width": 177.44315245346684,
+						"height": 57.888752889838614,
 						"originX": 0,
 						"originY": 0,
 						"color": [
@@ -152,5 +194,5 @@
 	"vpX": 0.5,
 	"vpY": 0.5,
 	"projection": "perspective",
-	"eventSheet": "Event sheet 2"
+	"eventSheet": "Event Menu"
 }

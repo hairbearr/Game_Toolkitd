@@ -1,5 +1,5 @@
 {
-	"name": "Layout 2",
+	"name": "Win Screen",
 	"layers": [
 		{
 			"name": "Background",
@@ -72,7 +72,7 @@
 				{
 					"type": "Conratulations",
 					"properties": {
-						"text": "Congratulations",
+						"text": "Thank you for playing\nCave Delver",
 						"enable-bbcode": true,
 						"font": "Palatino Linotype",
 						"size": 67,
@@ -80,13 +80,13 @@
 						"bold": true,
 						"italic": false,
 						"color": [
-							0.050980392156862744,
-							0.050980392156862744,
-							0.050980392156862744,
+							1,
+							1,
+							1,
 							1
 						],
-						"horizontal-alignment": "left",
-						"vertical-alignment": "top",
+						"horizontal-alignment": "center",
+						"vertical-alignment": "center",
 						"wrapping": "word",
 						"initially-visible": true,
 						"origin": "top-left"
@@ -95,10 +95,10 @@
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 138,
-						"y": 97,
-						"width": 698,
-						"height": 157,
+						"x": 0.01616352179415692,
+						"y": 0.5779844732286108,
+						"width": 1000,
+						"height": 197.82404406204176,
 						"originX": 0,
 						"originY": 0,
 						"color": [
@@ -147,7 +147,7 @@
 					"type": "RestartLevelButton",
 					"properties": {
 						"type": "button",
-						"text": "Restart Level",
+						"text": "Reload Game",
 						"tooltip": "",
 						"initially-visible": true,
 						"enabled": true,
@@ -159,10 +159,10 @@
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 282,
-						"y": 304,
-						"width": 339,
-						"height": 131,
+						"x": 442.6194370882981,
+						"y": 237.31788956839964,
+						"width": 114.71221874661387,
+						"height": 25.374302921595415,
 						"originX": 0,
 						"originY": 0,
 						"color": [
@@ -171,6 +171,59 @@
 							1,
 							1
 						]
+					}
+				},
+				{
+					"type": "TxtTooltip",
+					"properties": {
+						"text": "Group H is\nHarry Brock | Barnabas Ofori | Mello Thomas | Khyree Brookins",
+						"enable-bbcode": true,
+						"font": "Arial",
+						"size": 12,
+						"line-height": 0,
+						"bold": false,
+						"italic": false,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"horizontal-alignment": "center",
+						"vertical-alignment": "center",
+						"wrapping": "word",
+						"initially-visible": true,
+						"origin": "top-left"
+					},
+					"uid": 80,
+					"instanceVariables": {},
+					"behaviors": {
+						"Fade": {
+							"properties": {
+								"fade-in-time": 0,
+								"wait-time": 0,
+								"fade-out-time": 5,
+								"destroy": false,
+								"enabled": false,
+								"live-preview": false
+							}
+						}
+					},
+					"world": {
+						"x": 273.27772567065676,
+						"y": 333.7141448961256,
+						"width": 453.51812678348784,
+						"height": 61.94693244811418,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
 					}
 				}
 			],
@@ -211,5 +264,5 @@
 	"vpX": 0.5,
 	"vpY": 0.5,
 	"projection": "perspective",
-	"eventSheet": "Event sheet 2"
+	"eventSheet": "Event Menu"
 }
