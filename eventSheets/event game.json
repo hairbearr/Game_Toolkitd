@@ -476,6 +476,22 @@
 										"instance-variable": "GoldKeys",
 										"value": "Tresure_chest.GoldKeysNeeded"
 									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 593521907115450,
+									"parameters": {
+										"seconds": "1.0"
+									}
+								},
+								{
+									"id": "set-collisions-enabled",
+									"objectClass": "GreenKey",
+									"sid": 201816783092259,
+									"parameters": {
+										"collisions": "enabled"
+									}
 								}
 							],
 							"sid": 580948168886263

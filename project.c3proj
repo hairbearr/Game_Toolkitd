@@ -1,7 +1,7 @@
 {
 	"projectFormatVersion": 1,
 	"savedWithRelease": 26800,
-	"name": "Game_Toolkit",
+	"name": "Cave Delver",
 	"runtime": "c3",
 	"useWorker": "auto",
 	"bundleAddons": false,
@@ -365,9 +365,9 @@
 		]
 	},
 	"properties": {
-		"description": "",
+		"description": "Group H's Tool Kit game.",
 		"version": "1.0.0.0",
-		"author": "",
+		"author": "Group H (Harry Brock, Barnabas Ofori, Mello Thomas, Khyree Brookins)",
 		"authorEmail": "",
 		"authorWebsite": "",
 		"appId": "",
@@ -410,7 +410,7 @@
 		"cordovaiOSScheme": "app",
 		"cordovaAndroidScheme": "file"
 	},
-	"viewportWidth": 1000,
-	"viewportHeight": 500,
+	"viewportWidth": 854,
+	"viewportHeight": 480,
 	"firstLayout": "Menu"
 }
